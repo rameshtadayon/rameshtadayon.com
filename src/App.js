@@ -3,8 +3,8 @@ import './App.css';
 import Button from './components/Button';
 import LinkedButton from './components/LinkedButton';
 import Icon from './components/Icon';
-import PersonalPhoto from './photos/bannerImage.jpeg'
-
+import PersonalPhoto from './photos/bannerImage.jpeg';
+import TitlebarGridList from './components/Card';
 import {
   BrowserRouter as Router,
   Switch,
@@ -12,11 +12,12 @@ import {
 } from "react-router-dom";
 
 
+
 function App() {
   const homeIcon = <Icon to='/'/> 
   const hobbyButton = <Button to='/hobbies' text='Cakes and Bakes'/> 
   const aboutButton = <Button to='/aboutme' text='About Me'/> 
-  const projectsButton = <Button to='/projects' text='Projects'/> 
+  const projectsButton = <Button to='/projects' text='Programming Projects'/> 
 
   const banner = (
     <div style={{display: 'flex', alignItems: 'center', justifyContent:'space-between', backgroundColor: 'black', height: '100%', width: '100%', backgroundImage: `url("https://images.unsplash.com/photo-1545231097-cbd796f1d95f?ixid=MXwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHw%3D&ixlib=rb-1.2.1&auto=format&fit=crop&w=2572&q=80")`, backgroundSize: '300px 200px'}}>
@@ -67,7 +68,7 @@ function App() {
           </Route>
           <Route path="/projects">
             <Projects />
-          </Route>
+            </Route>
           <Route path= "/aboutme">
             <About />
           </Route>
@@ -138,17 +139,19 @@ function About() {
 }
 
 function Projects() {
-  return (
-    <div>
-      <h2>Projects</h2>
-    </div>
-  );
+    return (
+      <div style={{display:'flex', justifyContent: 'center', backgroundColor:'black', height:'100vh'}}>
+       <h1 style={{display:'flex', justifyContent:'center', paddingTop:'50px',backgroundColor:'black', color:'white', fontFamily:'Quicksand'}}>
+        Work In Progress, Check in at a Later Date for More
+       </h1>
+      </div>
+    );
 }
 
 function Hobbies() {
   return (
-    <div>
-      <h2>Cakse and Bakes</h2>
+    <div style={{display:'flex', justifyContent:'center', backgroundColor:'black'}}>
+       <TitlebarGridList />
     </div>
   );
 }
