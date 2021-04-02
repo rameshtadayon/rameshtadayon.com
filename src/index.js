@@ -1,12 +1,28 @@
+import { library } from '@fortawesome/fontawesome-svg-core';
 import React from 'react';
 import ReactDOM from 'react-dom';
 import './index.css';
 import App from './App';
 import reportWebVitals from './reportWebVitals';
+import { faHome} from '@fortawesome/free-solid-svg-icons';
+import { createBrowserHistory } from 'history';
+import { ConnectedRouter } from 'connected-react-router'
+import { Provider } from 'react-redux';
+import { store } from './store';
+
+
+library.add(faHome)
+
+const history = createBrowserHistory()
+
 
 ReactDOM.render(
   <React.StrictMode>
-    <App />
+    <Provider store={store}>  
+      <ConnectedRouter history={history}>
+        <App />
+      </ConnectedRouter>
+    </Provider>
   </React.StrictMode>,
   document.getElementById('root')
 );
