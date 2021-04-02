@@ -1,9 +1,6 @@
 import React from 'react';
-import { useHistory } from 'react-router-dom';
 
-export default ({to, text}) => {
-  const history = useHistory();
-
+const LinkedButton = ({to, text}) => {
   function handleClick() {
     window.open(to,'_blank');
   }
@@ -15,3 +12,4 @@ export default ({to, text}) => {
   );
 }
 
+export default LinkedButton;

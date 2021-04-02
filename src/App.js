@@ -130,7 +130,7 @@ function About() {
               my free time, I play video games like world of warcraft, overwatch, and rocket league. I also love to 
               bake cakes and sweets for family and friends. 
             </p>
-            <img className='turkeyIMG' src={PersonalPhoto} alt='Personal Photo of Self and Partner' style={{justifyContent:'right', border:'1px solid white', borderRadius:'18px'}}/>
+            <img className='turkeyIMG' src={PersonalPhoto} alt='Me and Jake' style={{justifyContent:'right', border:'1px solid white', borderRadius:'18px'}}/>
           </div>
         </div>
       </div>

@@ -1,7 +1,7 @@
 import React from 'react';
 import { useHistory } from 'react-router-dom';
 
-export default ({to, text}) => {
+const Button = ({to, text}) => {
   const history = useHistory();
 
   function handleClick() {
@@ -15,3 +15,4 @@ export default ({to, text}) => {
   );
 }
 
+export default Button;
