@@ -1,0 +1,27 @@
+
+.bakeTile {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    height: 200px;
+    padding: 25px;
+    margin: 25px;
+    flex-wrap: wrap;
+    border: 1px solid white;
+}
+
+.tileImage {
+    display: flex;
+    justify-content: center;
+    height: 150px;
+}
+
+
+.tileLabel{
+    display: flex;
+    size: 10px;
+    color: white;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-top: 10px;
+}
